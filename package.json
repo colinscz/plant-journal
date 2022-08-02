@@ -1,6 +1,7 @@
 {
   "name": "plant-journal",
   "version": "0.0.0",
+  "packageManager": "pnpm@7.6.0",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",

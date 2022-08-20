@@ -4,7 +4,23 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
 
-import { Inkline, components } from "@inkline/inkline";
+import {
+  Inkline,
+  components,
+  IForm,
+  IButton,
+  ICheckbox,
+  IFormGroup,
+  IFormLabel,
+  INumberInput,
+  IRadio,
+  ISelect,
+  IToggle,
+  IInput,
+  ICheckboxGroup,
+  IRadioGroup,
+  ITextarea,
+} from "@inkline/inkline";
 import "@inkline/inkline/inkline.scss";
 
 import "./assets/main.css";
@@ -15,7 +31,21 @@ app.use(createPinia());
 app.use(router);
 
 app.use(Inkline, {
-  components: {},
+  components: {
+    IForm,
+    IFormGroup,
+    IFormLabel,
+    ISelect,
+    IInput,
+    INumberInput,
+    ICheckbox,
+    ICheckboxGroup,
+    IRadioGroup,
+    IRadio,
+    ITextarea,
+    IToggle,
+    IButton,
+  },
   icons: {},
   colorMode: "system",
   locale: "en",

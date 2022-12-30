@@ -1,23 +1,64 @@
 <script setup lang="ts">
+// import { onMounted, ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+
+/* To enable once supabase setup is ready
+import { supabase } from './supabase'
+const session = ref()
+onMounted(() => {
+  supabase.auth.getSession().then(({ data }) => {
+    session.value = data.session
+  })
+  supabase.auth.onAuthStateChange((_, _session) => {
+    session.value = _session
+  })
+})
+*/
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <i-layout>
+    <i-layout-header>
+      <header>
+        <div class="wrapper">
+          <i-navbar size="md">
+            <i-navbar-brand to="/">
+              <img
+                alt="Vue logo"
+                class="logo"
+                src="@/assets/logo.svg"
+                width="20"
+                height="20"
+              />
+            </i-navbar-brand>
+            <i-navbar-collapsible>
+              <i-nav>
+                <i-nav-item to="/"> Home </i-nav-item>
+                <i-nav-item to="/list"> Overview </i-nav-item>
+                <i-nav-item to="/new"> Add new 🌱 </i-nav-item>
+                <i-nav-item to="/about"> About </i-nav-item>
+                <!--                 <i-nav-item
+                  ><i-select
+                    v-model="$i18n.locale"
+                    :options="$i18n.availableLocales"
+                  ></i-select
+                ></i-nav-item> -->
+              </i-nav>
+            </i-navbar-collapsible>
+          </i-navbar>
+          <!--           <nav>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/new">Add new plant</RouterLink>
+          </nav> -->
+        </div>
+      </header>
+    </i-layout-header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+    <i-layout-content>
+      <RouterView />
+    </i-layout-content>
+  </i-layout>
 </template>
 
 <style scoped>
@@ -31,7 +72,7 @@ header {
   margin: 0 auto 2rem;
 }
 
-nav {
+/* nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
@@ -54,7 +95,7 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
-}
+} */
 
 @media (min-width: 1024px) {
   header {
@@ -67,7 +108,7 @@ nav a:first-of-type {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
+  /*   header .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
@@ -80,6 +121,6 @@ nav a:first-of-type {
 
     padding: 1rem 0;
     margin-top: 1rem;
-  }
+  } */
 }
 </style>

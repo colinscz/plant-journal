@@ -14,7 +14,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@inkline/inkline": "^3.1.4",
+    "@inkline/inkline": "^3.1.10",
+    "@supabase/supabase-js": "^2.2.2",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
     "vue-i18n": "^9.2.2",

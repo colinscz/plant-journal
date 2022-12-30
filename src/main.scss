@@ -2,7 +2,18 @@
 @import '@inkline/inkline/css/mixins';
 
 :root {
-    --color--primary--h: 195deg;
-    --color--primary--s: 77%;
-    --color--primary--l: 39%;
+  --color--primary--h: 195deg;
+  --color--primary--s: 77%;
+  --color--primary--l: 39%;
+
+  --spacing: 2rem;
+
+  --border-top-left-radius: 0.25rem;
+  --border-top-right-radius: 0.25rem;
+  --border-bottom-right-radius: 0.25rem;
+  --border-bottom-left-radius: 0.25rem;
+}
+
+@include i-layout-content() {
+  margin: 20px;
 }

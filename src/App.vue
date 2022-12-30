@@ -58,6 +58,9 @@ onMounted(() => {
     <i-layout-content>
       <RouterView />
     </i-layout-content>
+    <i-layout-footer>
+      Proudly maintained by Ignotus 2022-ongoing
+    </i-layout-footer>
   </i-layout>
 </template>
 

@@ -1,48 +1,47 @@
-import { createApp } from "vue";
-import { createPinia } from "pinia";
-import { createI18n } from "vue-i18n";
-
-import App from "./App.vue";
-import router from "./router";
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import { createI18n } from 'vue-i18n'
 
 import {
-  Inkline,
-  components,
-  IForm,
   IButton,
   ICheckbox,
+  ICheckboxGroup,
+  IForm,
   IFormGroup,
   IFormLabel,
-  INumberInput,
-  IRadio,
-  ISelect,
-  IToggle,
   IInput,
-  ICheckboxGroup,
-  IRadioGroup,
-  ITextarea,
+  INav,
+  INavItem,
   INavbar,
   INavbarBrand,
-  INavItem,
-  INav,
   INavbarCollapsible,
+  INumberInput,
+  IRadio,
+  IRadioGroup,
+  ISelect,
   ITable,
-} from "@inkline/inkline";
-import "@inkline/inkline/inkline.scss";
+  ITextarea,
+  IToggle,
+  Inkline,
+} from '@inkline/inkline'
+import App from './App.vue'
+import router from './router'
 
-import "./assets/main.css";
+import '@inkline/inkline/inkline.scss'
+
+import './assets/main.css'
 
 const i18n = createI18n({
-  locale: "en",
+  locale: 'en',
   // something vue-i18n options here ...
-});
+})
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(i18n);
+app.use(i18n)
 
-app.use(createPinia());
-app.use(router);
+app.use(createPinia())
+app.use(router)
 
 app.use(Inkline, {
   components: {
@@ -67,13 +66,13 @@ app.use(Inkline, {
     ITable,
   },
   icons: {},
-  colorMode: "system",
-  locale: "de",
-  validateOn: ["input", "blur"],
-  color: "",
-  size: "",
-  routerComponent: "router-link",
+  colorMode: 'system',
+  locale: 'de',
+  validateOn: ['input', 'blur'],
+  color: '',
+  size: '',
+  routerComponent: 'router-link',
   componentOptions: {},
-});
+})
 
-app.mount("#app");
+app.mount('#app')

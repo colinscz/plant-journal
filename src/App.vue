@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -18,14 +18,22 @@ import HelloWorld from "./components/HelloWorld.vue";
                 src="@/assets/logo.svg"
                 width="20"
                 height="20"
-              />
+              >
             </i-navbar-brand>
             <i-navbar-collapsible>
               <i-nav>
-                <i-nav-item to="/"> Home </i-nav-item>
-                <i-nav-item to="/list"> Overview </i-nav-item>
-                <i-nav-item to="/new"> Add new 🌱</i-nav-item>
-                <i-nav-item to="/about"> About </i-nav-item>
+                <i-nav-item to="/">
+                  Home
+                </i-nav-item>
+                <i-nav-item to="/list">
+                  Overview
+                </i-nav-item>
+                <i-nav-item to="/new">
+                  Add new 🌱
+                </i-nav-item>
+                <i-nav-item to="/about">
+                  About
+                </i-nav-item>
                 <!--                 <i-nav-item
                   ><i-select
                     v-model="$i18n.locale"

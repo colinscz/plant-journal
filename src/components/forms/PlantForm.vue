@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const name = ref("");
-const description = ref("");
-const type = ref("");
-const substrat = ref("");
-const minTemperature = ref("");
-const maxTemperature = ref("");
-const waterAmount = ref("");
-const duengen = ref("");
-const umtopfen = ref("");
-const recentlyWatered = ref("");
-const loading = false;
+const name = ref('')
+const description = ref('')
+const type = ref('')
+const substrat = ref('')
+const minTemperature = ref('')
+const maxTemperature = ref('')
+const waterAmount = ref('')
+const duengen = ref('')
+const umtopfen = ref('')
+const recentlyWatered = ref('')
+const loading = false
 
 const options = [
-  { id: 1, label: "Pflegeleichte Pflanze" },
-  { id: 2, label: "Pflanzen fürs Schlafzimmer" },
-  { id: 3, label: "Pflanzen für bessere Luft" },
-];
+  { id: 1, label: 'Pflegeleichte Pflanze' },
+  { id: 2, label: 'Pflanzen fürs Schlafzimmer' },
+  { id: 3, label: 'Pflanzen für bessere Luft' },
+]
 
 const substratOptions = [
-  { id: 1, label: "Topfpflanzenerde" },
-  { id: 2, label: "Kakteenerde" },
-  { id: 3, label: "Blumenerde" },
-];
+  { id: 1, label: 'Topfpflanzenerde' },
+  { id: 2, label: 'Kakteenerde' },
+  { id: 3, label: 'Blumenerde' },
+]
 
 const onSubmit = () => {
   /*   this.loading = true;
@@ -31,8 +31,9 @@ const onSubmit = () => {
   setTimeout(() => {
     this.loading = false;
   }, 2000); */
-};
+}
 </script>
+
 <template>
   <i-form @submit="onSubmit">
     <i-form-group>
@@ -72,38 +73,61 @@ const onSubmit = () => {
     <i-form-group>
       <i-form-label>Menge an Wasser (Giessen)</i-form-label>
       <i-checkbox-group v-model="waterAmount">
-        <i-checkbox value="regularly">Regelmässig</i-checkbox>
-        <i-checkbox value="often">2-3x pro Woche</i-checkbox>
-        <i-checkbox value="monthly">Monatlich</i-checkbox>
-        <i-checkbox value="rare">Selten</i-checkbox>
+        <i-checkbox value="regularly">
+          Regelmässig
+        </i-checkbox>
+        <i-checkbox value="often">
+          2-3x pro Woche
+        </i-checkbox>
+        <i-checkbox value="monthly">
+          Monatlich
+        </i-checkbox>
+        <i-checkbox value="rare">
+          Selten
+        </i-checkbox>
       </i-checkbox-group>
     </i-form-group>
 
     <i-form-group>
       <i-form-label>Düngen</i-form-label>
       <i-radio-group v-model="duengen">
-        <i-radio value="plantFertiliser">Topfplanzendünger</i-radio>
-        <i-radio value="cactusFertiliser">Kakteendünger</i-radio>
-        <i-radio value="fertiliser">Kein Dünger</i-radio>
+        <i-radio value="plantFertiliser">
+          Topfplanzendünger
+        </i-radio>
+        <i-radio value="cactusFertiliser">
+          Kakteendünger
+        </i-radio>
+        <i-radio value="fertiliser">
+          Kein Dünger
+        </i-radio>
       </i-radio-group>
     </i-form-group>
 
     <i-form-group>
       <i-form-label>Jährlich umtopfen?</i-form-label>
       <i-radio-group v-model="umtopfen">
-        <i-radio value="yes">Ja</i-radio>
-        <i-radio value="no">Nein</i-radio>
+        <i-radio value="yes">
+          Ja
+        </i-radio>
+        <i-radio value="no">
+          Nein
+        </i-radio>
       </i-radio-group>
     </i-form-group>
 
     <i-form-group>
       <i-form-label>Wurde die Pflanze kürzlich gegossen?</i-form-label>
-      <i-checkbox v-model="recentlyWatered">Ja</i-checkbox>
+      <i-checkbox v-model="recentlyWatered">
+        Ja
+      </i-checkbox>
     </i-form-group>
 
     <i-form-group>
-      <i-button type="submit" :loading="loading"> Submit </i-button>
+      <i-button type="submit" :loading="loading">
+        Submit
+      </i-button>
     </i-form-group>
   </i-form>
 </template>
+
 <style scoped></style>

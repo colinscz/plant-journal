@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PlantForm from "@/components/forms/PlantForm.vue";
+import PlantForm from '@/components/forms/PlantForm.vue'
 </script>
 
 <template>

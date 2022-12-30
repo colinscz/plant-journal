@@ -1,26 +1,26 @@
-# plant-journal
+# plant-journal 🪴
 
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Features - to be implemented
 
-- 🏗 Advice on how to treat certain plants
+- 🏗 Advice on how to treat certain plants 🌷
 
-- 🏗 Import information for different plants
+- 🏗 Import information for different plants 🌻
 
-- 🏗 Create, edit and delete plant entries
+- 🏗 Create, edit and delete plant entries 🍃
 
-- 🏗 Overview of your plants
+- 🏗 Overview of your plants 😲
 
-- 🏗 Reminders when you should look after your plant next based on entered parameters
+- 🏗 Reminders when you should look after your plant next based on entered parameters 🌵
 
-- 🏗 Dark Mode
+- 🏗 Dark Mode 🚀
 
 - 🏗 and more to come...
 
-🦾 Stay on top of the plant game and lean back since the app reminds you when it's time to pour them again
+🦾 Stay on top of the plant game and lean back since the app reminds you when it's time to pour them again 💧🚰
 
-## Tech Stack (WIP)
+## Tech Stack (WIP) 🏡
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [esbuild](https://github.com/evanw/esbuild) - born with fastness
 

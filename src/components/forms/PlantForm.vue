@@ -90,7 +90,10 @@ const onSubmit = () => {
 
     <i-form-group>
       <i-form-label>Jährlich umtopfen?</i-form-label>
-      <i-toggle v-model="umtopfen">I confirm this toggle</i-toggle>
+      <i-radio-group v-model="umtopfen">
+        <i-radio value="yes">Ja</i-radio>
+        <i-radio value="no">Nein</i-radio>
+      </i-radio-group>
     </i-form-group>
 
     <i-form-group>
@@ -103,3 +106,4 @@ const onSubmit = () => {
     </i-form-group>
   </i-form>
 </template>
+<style scoped></style>

@@ -5,6 +5,7 @@ specifiers:
   '@inkline/config': ^1.9.1
   '@inkline/inkline': ^4.2.1
   '@inkline/plugin': ^1.5.2
+  '@prisma/client': ^5.3.1
   '@rushstack/eslint-patch': ^1.4.0
   '@supabase/supabase-js': ^2.2.2
   '@types/jsdom': ^16.2.14
@@ -24,6 +25,7 @@ specifiers:
   postcss: ^8.4.29
   postcss-preset-env: ^7.8.0
   prettier: ^2.5.1
+  prisma: ^5.3.1
   sass: ^1.64.0
   start-server-and-test: ^2.0.0
   typescript: ^5.1.6
@@ -46,6 +48,7 @@ devDependencies:
   '@antfu/eslint-config': 0.42.0_bhnyxlizrji3mbf26ogzgnqkqe
   '@inkline/config': 1.9.1
   '@inkline/plugin': 1.5.2_gkm2fmelfych6wbzthnwh3kcnu
+  '@prisma/client': 5.3.1_prisma@5.3.1
   '@rushstack/eslint-patch': 1.4.0
   '@types/jsdom': 16.2.15
   '@types/node': 16.11.47
@@ -63,6 +66,7 @@ devDependencies:
   postcss: 8.4.29
   postcss-preset-env: 7.8.0_postcss@8.4.29
   prettier: 2.7.1
+  prisma: 5.3.1
   sass: 1.67.0
   start-server-and-test: 2.0.0
   typescript: 5.2.2
@@ -1084,6 +1088,29 @@ packages:
 
   /@popperjs/core/2.11.6:
     resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+
+  /@prisma/client/5.3.1_prisma@5.3.1:
+    resolution: {integrity: sha512-ArOKjHwdFZIe1cGU56oIfy7wRuTn0FfZjGuU/AjgEBOQh+4rDkB6nF+AGHP8KaVpkBIiHGPQh3IpwQ3xDMdO0Q==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 5.3.1-2.61e140623197a131c2a6189271ffee05a7aa9a59
+      prisma: 5.3.1
+    dev: true
+
+  /@prisma/engines-version/5.3.1-2.61e140623197a131c2a6189271ffee05a7aa9a59:
+    resolution: {integrity: sha512-y5qbUi3ql2Xg7XraqcXEdMHh0MocBfnBzDn5GbV1xk23S3Mq8MGs+VjacTNiBh3dtEdUERCrUUG7Z3QaJ+h79w==}
+    dev: true
+
+  /@prisma/engines/5.3.1:
+    resolution: {integrity: sha512-6QkILNyfeeN67BNEPEtkgh3Xo2tm6D7V+UhrkBbRHqKw9CTaz/vvTP/ROwYSP/3JT2MtIutZm/EnhxUiuOPVDA==}
+    requiresBuild: true
+    dev: true
 
   /@rollup/pluginutils/5.0.4:
     resolution: {integrity: sha512-0KJnIoRI8A+a1dqOYLxH8vBf8bphDmty5QvIm2hqm7oFCFYKCAZWWd2hXgMibaPsNDhI0AtpYfQZJG47pt/k4g==}
@@ -5410,6 +5437,15 @@ packages:
       '@jest/schemas': 29.6.3
       ansi-styles: 5.2.0
       react-is: 18.2.0
+    dev: true
+
+  /prisma/5.3.1:
+    resolution: {integrity: sha512-Wp2msQIlMPHe+5k5Od6xnsI/WNG7UJGgFUJgqv/ygc7kOECZapcSz/iU4NIEzISs3H1W9sFLjAPbg/gOqqtB7A==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 5.3.1
     dev: true
 
   /process-nextick-args/2.0.1:

@@ -23,13 +23,7 @@ onMounted(() => {
         <div class="wrapper">
           <i-navbar size="md">
             <i-navbar-brand to="/">
-              <img
-                alt="Vue logo"
-                class="logo"
-                src="@/assets/logo.svg"
-                width="20"
-                height="20"
-              />
+              <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="20" height="20" />
             </i-navbar-brand>
             <i-navbar-collapsible>
               <i-nav>
@@ -71,7 +65,6 @@ header {
 }
 
 .logo {
-  display: block;
   margin: 0 auto 2rem;
 }
 

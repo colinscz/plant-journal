@@ -6,9 +6,9 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Name of plant</th>
+          <th>Location</th>
+          <th>Next date to pour</th>
         </tr>
       </thead>
       <tbody>

@@ -42,48 +42,40 @@ const onSubmit = () => {
     </i-form-group>
 
     <i-form-group>
-      <i-form-label>Beschreibung</i-form-label>
+      <i-form-label>Description</i-form-label>
       <i-textarea v-model="description" placeholder="Write a comment.." />
     </i-form-group>
 
     <i-form-group>
-      <i-form-label>Pflanzentyp</i-form-label>
-      <i-select
-        v-model="type"
-        :options="options"
-        placeholder="Choose an option"
-      />
+      <i-form-label>Type</i-form-label>
+      <i-select v-model="type" :options="options" placeholder="Choose an option" />
     </i-form-group>
 
     <i-form-group>
       <i-form-label>Substrat</i-form-label>
-      <i-select
-        v-model="substrat"
-        :options="substratOptions"
-        placeholder="Choose an option"
-      />
+      <i-select v-model="substrat" :options="substratOptions" placeholder="Choose an option" />
     </i-form-group>
 
     <i-form-group>
-      <i-form-label>Temperatur</i-form-label>
+      <i-form-label>Temperature range</i-form-label>
       <i-number-input v-model="minTemperature" placeholder="Enter a number.." />
       <i-number-input v-model="maxTemperature" placeholder="Enter a number.." />
     </i-form-group>
 
     <i-form-group>
-      <i-form-label>Menge an Wasser (Giessen)</i-form-label>
+      <i-form-label>Amount of water (Giessen)</i-form-label>
       <i-checkbox-group v-model="waterAmount">
         <i-checkbox value="regularly">
           Regelmässig
         </i-checkbox>
         <i-checkbox value="often">
-          2-3x pro Woche
+          2-3x per week
         </i-checkbox>
         <i-checkbox value="monthly">
-          Monatlich
+          Monthly
         </i-checkbox>
         <i-checkbox value="rare">
-          Selten
+          Rarely
         </i-checkbox>
       </i-checkbox-group>
     </i-form-group>
@@ -116,9 +108,9 @@ const onSubmit = () => {
     </i-form-group>
 
     <i-form-group>
-      <i-form-label>Wurde die Pflanze kürzlich gegossen?</i-form-label>
+      <i-form-label>Has the plant been watered recently?</i-form-label>
       <i-checkbox v-model="recentlyWatered">
-        Ja
+        Yes
       </i-checkbox>
     </i-form-group>
 

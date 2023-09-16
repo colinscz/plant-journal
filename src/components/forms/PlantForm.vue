@@ -35,91 +35,91 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <i-form @submit="onSubmit">
-    <i-form-group>
-      <i-form-label>Name</i-form-label>
+  <IForm @submit="onSubmit">
+    <IFormGroup>
+      <IFormLabel>Name</IFormLabel>
       <i-input v-model="name" placeholder="Type something.." />
-    </i-form-group>
+    </IFormGroup>
 
-    <i-form-group>
-      <i-form-label>Description</i-form-label>
-      <i-textarea v-model="description" placeholder="Write a comment.." />
-    </i-form-group>
+    <IFormGroup>
+      <IFormLabel>Description</IFormLabel>
+      <ITextarea v-model="description" placeholder="Write a comment.." />
+    </IFormGroup>
 
-    <i-form-group>
-      <i-form-label>Type</i-form-label>
-      <i-select v-model="type" :options="options" placeholder="Choose an option" />
-    </i-form-group>
+    <IFormGroup>
+      <IFormLabel>Type</IFormLabel>
+      <ISelect v-model="type" :options="options" placeholder="Choose an option" />
+    </IFormGroup>
 
-    <i-form-group>
-      <i-form-label>Substrat</i-form-label>
-      <i-select v-model="substrat" :options="substratOptions" placeholder="Choose an option" />
-    </i-form-group>
+    <IFormGroup>
+      <IFormLabel>Substrat</IFormLabel>
+      <ISelect v-model="substrat" :options="substratOptions" placeholder="Choose an option" />
+    </IFormGroup>
 
-    <i-form-group>
-      <i-form-label>Temperature range</i-form-label>
+    <IFormGroup>
+      <IFormLabel>Temperature range</IFormLabel>
       <i-number-input v-model="minTemperature" placeholder="Enter a number.." />
       <i-number-input v-model="maxTemperature" placeholder="Enter a number.." />
-    </i-form-group>
+    </IFormGroup>
 
-    <i-form-group>
-      <i-form-label>Amount of water (Giessen)</i-form-label>
-      <i-checkbox-group v-model="waterAmount">
-        <i-checkbox value="regularly">
+    <IFormGroup>
+      <IFormLabel>Amount of water (Giessen)</IFormLabel>
+      <ICheckboxGroup v-model="waterAmount">
+        <ICheckbox value="regularly">
           Regelmässig
-        </i-checkbox>
-        <i-checkbox value="often">
+        </ICheckbox>
+        <ICheckbox value="often">
           2-3x per week
-        </i-checkbox>
-        <i-checkbox value="monthly">
+        </ICheckbox>
+        <ICheckbox value="monthly">
           Monthly
-        </i-checkbox>
-        <i-checkbox value="rare">
+        </ICheckbox>
+        <ICheckbox value="rare">
           Rarely
-        </i-checkbox>
-      </i-checkbox-group>
-    </i-form-group>
+        </ICheckbox>
+      </ICheckboxGroup>
+    </IFormGroup>
 
-    <i-form-group>
-      <i-form-label>Düngen</i-form-label>
-      <i-radio-group v-model="duengen">
-        <i-radio value="plantFertiliser">
+    <IFormGroup>
+      <IFormLabel>Düngen</IFormLabel>
+      <IRadioGroup v-model="duengen">
+        <IRadio value="plantFertiliser">
           Topfplanzendünger
-        </i-radio>
-        <i-radio value="cactusFertiliser">
+        </IRadio>
+        <IRadio value="cactusFertiliser">
           Kakteendünger
-        </i-radio>
-        <i-radio value="fertiliser">
+        </IRadio>
+        <IRadio value="fertiliser">
           Kein Dünger
-        </i-radio>
-      </i-radio-group>
-    </i-form-group>
+        </IRadio>
+      </IRadioGroup>
+    </IFormGroup>
 
-    <i-form-group>
-      <i-form-label>Jährlich umtopfen?</i-form-label>
-      <i-radio-group v-model="umtopfen">
-        <i-radio value="yes">
+    <IFormGroup>
+      <IFormLabel>Jährlich umtopfen?</IFormLabel>
+      <IRadioGroup v-model="umtopfen">
+        <IRadio value="yes">
           Ja
-        </i-radio>
-        <i-radio value="no">
+        </IRadio>
+        <IRadio value="no">
           Nein
-        </i-radio>
-      </i-radio-group>
-    </i-form-group>
+        </IRadio>
+      </IRadioGroup>
+    </IFormGroup>
 
-    <i-form-group>
-      <i-form-label>Has the plant been watered recently?</i-form-label>
-      <i-checkbox v-model="recentlyWatered">
+    <IFormGroup>
+      <IFormLabel>Has the plant been watered recently?</IFormLabel>
+      <ICheckbox v-model="recentlyWatered">
         Yes
-      </i-checkbox>
-    </i-form-group>
+      </ICheckbox>
+    </IFormGroup>
 
-    <i-form-group>
-      <i-button type="submit" :loading="loading">
+    <IFormGroup>
+      <IButton type="submit" :loading="loading">
         Submit
-      </i-button>
-    </i-form-group>
-  </i-form>
+      </IButton>
+    </IFormGroup>
+  </IForm>
 </template>
 
 <style scoped></style>

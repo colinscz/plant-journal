@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ITable } from '@inkline/inkline';
+
 </script>
 
 <template>
   <main>
-    <ITable striped responsive>
+    <!--     <ITable striped responsive>
       <thead>
         <tr>
           <th>#</th>
@@ -43,7 +43,7 @@ import { ITable } from '@inkline/inkline';
           <td>@alicecooper</td>
         </tr>
       </tbody>
-    </ITable>
+    </ITable> -->
   </main>
 </template>
 

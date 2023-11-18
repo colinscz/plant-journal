@@ -35,91 +35,49 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <IForm @submit="onSubmit">
-    <IFormGroup>
-      <IFormLabel>Name</IFormLabel>
-      <i-input v-model="name" placeholder="Type something.." />
-    </IFormGroup>
+  <FormKit type="form">
+    <FormKit type="text" name="name" id="name" validation="required|not:Admin" label="Name"
+      help="Enter your plant's full name" placeholder="“Scarlet Sword”" />
 
-    <IFormGroup>
+    <FormKit type="select" label="Type" name="type" id="type" placeholder="Select a type" :options="['Pflegeleichte Pflanze', 'Pflanzen fürs Schlafzimmer',
+      'Pflanzen für bessere Luft'
+    ]" />
+
+    <FormKit type="select" label="Substrat" name="substrat" id="substrat" placeholder="Select a type" :options="[
+      'Topfpflanzenerde',
+      'Kakteenerde',
+      'Blumenerde'
+    ]" />
+
+    <FormKit type="number" help="What temperature should the house be?" number="integer" label="Thermostat" name="minTemp"
+      value="10" step="1" />
+
+    <FormKit type="number" help="What temperature should the house be?" number="integer" label="Thermostat" name="maxTemp"
+      value="30" step="1" />
+
+    <FormKit type="select" label="Giesszyklus" name="" id="pourCycle" placeholder="Select a pourCycle" :options="[
+      'Regelmässig',
+      '2x pro Woche',
+      'Monatlich',
+      'Selten'
+    ]" />
+
+    <FormKit v-model="duengen" type="radio" label="Düngen?"
+      :options="['Topfplanzendünger', 'Kakteendünger', 'Kein Dünger']" help="Was für Dünger braucht deine Pflanze?" />
+
+
+    <FormKit v-model="umtopfen" type="radio" label="Jährlich umtopfen?" :options="['Ja', 'Nein']"
+      help="Wann muss deine Pflanze umgetopft werden" />
+
+    <FormKit v-model="recentlyWatered" type="radio" label="Has the plant been watered recently?" :options="['Ja', 'Nein']"
+      help="Kürzlich gegossen?" />
+
+  </FormKit>
+
+  <!--     <IFormGroup>
       <IFormLabel>Description</IFormLabel>
       <ITextarea v-model="description" placeholder="Write a comment.." />
-    </IFormGroup>
-
-    <IFormGroup>
-      <IFormLabel>Type</IFormLabel>
-      <ISelect v-model="type" :options="options" placeholder="Choose an option" />
-    </IFormGroup>
-
-    <IFormGroup>
-      <IFormLabel>Substrat</IFormLabel>
-      <ISelect v-model="substrat" :options="substratOptions" placeholder="Choose an option" />
-    </IFormGroup>
-
-    <IFormGroup>
-      <IFormLabel>Temperature range</IFormLabel>
-      <i-number-input v-model="minTemperature" placeholder="Enter a number.." />
-      <i-number-input v-model="maxTemperature" placeholder="Enter a number.." />
-    </IFormGroup>
-
-    <IFormGroup>
-      <IFormLabel>Amount of water (Giessen)</IFormLabel>
-      <ICheckboxGroup v-model="waterAmount">
-        <ICheckbox value="regularly">
-          Regelmässig
-        </ICheckbox>
-        <ICheckbox value="often">
-          2-3x per week
-        </ICheckbox>
-        <ICheckbox value="monthly">
-          Monthly
-        </ICheckbox>
-        <ICheckbox value="rare">
-          Rarely
-        </ICheckbox>
-      </ICheckboxGroup>
-    </IFormGroup>
-
-    <IFormGroup>
-      <IFormLabel>Düngen</IFormLabel>
-      <IRadioGroup v-model="duengen">
-        <IRadio value="plantFertiliser">
-          Topfplanzendünger
-        </IRadio>
-        <IRadio value="cactusFertiliser">
-          Kakteendünger
-        </IRadio>
-        <IRadio value="fertiliser">
-          Kein Dünger
-        </IRadio>
-      </IRadioGroup>
-    </IFormGroup>
-
-    <IFormGroup>
-      <IFormLabel>Jährlich umtopfen?</IFormLabel>
-      <IRadioGroup v-model="umtopfen">
-        <IRadio value="yes">
-          Ja
-        </IRadio>
-        <IRadio value="no">
-          Nein
-        </IRadio>
-      </IRadioGroup>
-    </IFormGroup>
-
-    <IFormGroup>
-      <IFormLabel>Has the plant been watered recently?</IFormLabel>
-      <ICheckbox v-model="recentlyWatered">
-        Yes
-      </ICheckbox>
-    </IFormGroup>
-
-    <IFormGroup>
-      <IButton type="submit" :loading="loading">
-        Submit
-      </IButton>
-    </IFormGroup>
-  </IForm>
+    </IFormGroup> -->
 </template>
 
 <style scoped></style>

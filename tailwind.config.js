@@ -5,10 +5,11 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
+    './tailwind-theme.js',
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [FormKitVariants],
 }
 

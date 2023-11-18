@@ -668,4 +668,4 @@ export default {
       rewindIcon:
         'w-10 flex select-none [&>svg]:m-auto [&>svg]:w-full [&>svg]:max-w-[1rem] [&>svg]:max-h-[1rem] rotate-90 sm:rotate-0',
     },
-  }
+  };

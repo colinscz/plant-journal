@@ -1,5 +1,6 @@
 const FormKitVariants = require('@formkit/themes/tailwindcss')
 const tailwindPluginFormKit = require('@formkit/tailwindcss')
+const debugScreens = require('tailwindcss-debug-screens')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,6 +12,6 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [tailwindPluginFormKit, FormKitVariants],
+  plugins: [debugScreens, tailwindPluginFormKit, FormKitVariants],
 }
 

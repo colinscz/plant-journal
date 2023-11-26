@@ -8,12 +8,20 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
     plugins: [
         vue({
-            reactivityTransform: true
+            reactivityTransform: true,
+            template: {
+                compilerOptions: {
+                  isCustomElement: (tag) => {
+                    return tag.startsWith('form-')
+                  },
+                },
+              },
         })
     ],
     resolve: {
         alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url))
+            '@': fileURLToPath(new URL('./src', import.meta.url)),
+            'base': fileURLToPath(new URL('.', import.meta.url))
         }
     }
 });

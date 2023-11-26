@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // import { onMounted, ref } from 'vue'
 import { RouterView } from 'vue-router'
-import { ref } from 'vue'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -9,7 +8,7 @@ const navigation = [
   { name: 'Add new 🌱', href: '/new' },
 ]
 
-const mobileMenuOpen = ref(false)
+// const mobileMenuOpen = ref(false)
 /* To enable once supabase setup is ready
 import { supabase } from './supabase'
 const session = ref()
@@ -25,13 +24,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
+  <main class="h-min-screen bg-gradient-to-r from-green-200 to-green-500">
     <header>
       <div class="">
         <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div class="hidden lg:flex lg:gap-x-12">
             <a v-for="item in navigation" :key="item.name" :href="item.href"
-              class="text-sm font-semibold leading-6 text-gray-900 m-2">{{ item.name }}</a>
+              class="text-md font-semibold leading-6 text-gray-900 m-2">{{ item.name }}</a>
           </div>
         </nav>
       </div>

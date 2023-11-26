@@ -121,7 +121,7 @@ export default {
       input:
         'w-full pl-3 pr-8 py-2 border-none text-base text-gray-700 placeholder-gray-400 formkit-multiple:p-0 data-[placeholder="true"]:text-gray-400 formkit-multiple:data-[placeholder="true"]:text-inherit',
       selectIcon:
-        'flex p-[3px] shrink-0 w-5 mr-2 -ml-[1.5em] h-full pointer-events-none [&>svg]:w-[1em]',
+        'flex p-[3px] shrink-0 w-5 mr-2 -ml-[1.5em] h-5 pointer-events-none [&>svg]:w-[1em]',
       option: 'formkit-multiple:p-3 formkit-multiple:text-sm text-gray-700',
     },
     textarea: {

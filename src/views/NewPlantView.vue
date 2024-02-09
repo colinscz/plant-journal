@@ -3,8 +3,8 @@ import PlantForm from '@/components/forms/PlantForm.vue'
 </script>
 
 <template>
-  <main>
+  <div class="flex items-center flex-col">
     <h1>Add new 🌱</h1>
     <PlantForm />
-  </main>
+  </div>
 </template>

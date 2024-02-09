@@ -4,12 +4,12 @@
 
 <template>
   <main>
-    <div class="container px-4 py-10 mx-auto">
-      <p>
+    <div class="mx-auto">
+      <p class="font-bold">
         Welcome to the Plant Journal 🌱🌸🪴! <br>
         I am glad you made it and are interested in the daily live of your plants.<br><br>
       </p>
-      <p>
+      <p class="text-slate-700">
         The goal of the plant journal is to track everything around your plants and how to properly care for them based on
         established techniques and guidelines.
         Plant Journal offers the following functionalities:
@@ -32,4 +32,3 @@
     </div>
   </main>
 </template>
-

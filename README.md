@@ -2,6 +2,8 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+## Features
+
 ## Features - to be implemented
 
 - 🏗 Advice on how to treat certain plants 🌷

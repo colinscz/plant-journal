@@ -7,9 +7,7 @@ import { plugin, defaultConfig } from '@formkit/vue';
 import App from './App.vue';
 import router from './router';
 // @ts-ignore  
-import config from 'base/formkit.config';
-
-
+import config from '../formkit.config';
 
 
 const i18n = createI18n({

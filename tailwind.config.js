@@ -6,8 +6,8 @@ const debugScreens = require('tailwindcss-debug-screens')
 module.exports = {
   content: [
     "./index.html",
-    './tailwind-theme.js',
     "./src/**/*.{vue,js,ts,jsx,tsx}",
+    'formkit.theme.ts'
   ],
   theme: {
     extend: {},

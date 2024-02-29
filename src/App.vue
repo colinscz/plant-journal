@@ -37,8 +37,8 @@ onMounted(() => {
     </header>
 
     <RouterView />
-    <!--     <footer class="flex items-center">
+    <footer class="flex items-center">
       Proudly maintained by Ignotus 2022-ongoing
-    </footer> -->
+    </footer>
   </main>
 </template>

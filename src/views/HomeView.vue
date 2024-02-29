@@ -4,16 +4,16 @@
 
 <template>
   <main>
-    <div class="mx-auto text-white">
+    <div class="mx-auto text-white flex items-center flex-col">
       <p class="font-bold">
         Welcome to the Plant Journal 🌱🌸🪴! <br>
         I am glad you made it and are interested in the daily live of your plants.<br><br>
       </p>
-      <p>
+      <p class="">
         The goal of the plant journal is to track everything around your plants and how to properly care for them based on
         established techniques and guidelines.
         Plant Journal offers the following functionalities:
-      <ul>
+      <ul class="list-disc">
         <li>Tracking of the plants you own</li>
         <li>Possibility to add last occurence of watering of plants</li>
         <li>Reminder when it's best to water a certain plant again</li>

@@ -30,7 +30,7 @@ onMounted(() => {
         <nav class="mx-auto justify-between lg:px-8" aria-label="Global">
           <div class="lg:gap-x-12">
             <a v-for="item in navigation" :key="item.name" :href="item.href"
-              class="text-md font-semibold leading-6 text-gray-900 mx-2">{{ item.name }}</a>
+              class="text-md font-semibold leading-6 text-white mx-2">{{ item.name }}</a>
           </div>
         </nav>
       </div>

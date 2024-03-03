@@ -25,7 +25,7 @@ const substratOptions = [
   { id: 3, label: 'Blumenerde' },
 ]
 
-const onSubmit = () => {
+const submitHandler = () => {
   /*   this.loading = true;
 
   setTimeout(() => {
@@ -35,99 +35,44 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <i-form @submit="onSubmit">
-    <i-form-group>
-      <i-form-label>Name</i-form-label>
-      <i-input v-model="name" placeholder="Type something.." />
-    </i-form-group>
+  <FormKit type="form" @submit="submitHandler">
+    <FormKit type="text" name="name" id="name" validation="required|not:Admin" label="Name"
+      help="Enter your plant's full name" placeholder="“Scarlet Sword”" />
 
-    <i-form-group>
-      <i-form-label>Beschreibung</i-form-label>
-      <i-textarea v-model="description" placeholder="Write a comment.." />
-    </i-form-group>
+    <FormKit type="select" select-icon="caretDown" label="Type" name="type" id="type" placeholder="Select a type"
+      :options="['Pflegeleichte Pflanze', 'Pflanzen fürs Schlafzimmer',
+        'Pflanzen für bessere Luft'
+      ]" formkit-select-icon="inline-block h-4 w-4" />
 
-    <i-form-group>
-      <i-form-label>Pflanzentyp</i-form-label>
-      <i-select
-        v-model="type"
-        :options="options"
-        placeholder="Choose an option"
-      />
-    </i-form-group>
+    <FormKit type="select" select-icon="caretDown" label="Substrat" name="substrat" id="substrat"
+      placeholder="Select a type" :options="[
+        'Topfpflanzenerde',
+        'Kakteenerde',
+        'Blumenerde'
+      ]" />
 
-    <i-form-group>
-      <i-form-label>Substrat</i-form-label>
-      <i-select
-        v-model="substrat"
-        :options="substratOptions"
-        placeholder="Choose an option"
-      />
-    </i-form-group>
+    <!--   <FormKit type="number" help="What temperature should the house be?" number="integer" label="Thermostat" name="minTemp"
+      value="10" step="1" />
 
-    <i-form-group>
-      <i-form-label>Temperatur</i-form-label>
-      <i-number-input v-model="minTemperature" placeholder="Enter a number.." />
-      <i-number-input v-model="maxTemperature" placeholder="Enter a number.." />
-    </i-form-group>
+    <FormKit type="number" help="What temperature should the house be?" number="integer" label="Thermostat" name="maxTemp"
+      value="30" step="1" /> -->
 
-    <i-form-group>
-      <i-form-label>Menge an Wasser (Giessen)</i-form-label>
-      <i-checkbox-group v-model="waterAmount">
-        <i-checkbox value="regularly">
-          Regelmässig
-        </i-checkbox>
-        <i-checkbox value="often">
-          2-3x pro Woche
-        </i-checkbox>
-        <i-checkbox value="monthly">
-          Monatlich
-        </i-checkbox>
-        <i-checkbox value="rare">
-          Selten
-        </i-checkbox>
-      </i-checkbox-group>
-    </i-form-group>
+    <FormKit type="select" label="Giesszyklus" name="" id="pourCycle" placeholder="Select a pourCycle" :options="[
+      'Regelmässig',
+      '2x pro Woche',
+      'Monatlich',
+      'Selten'
+    ]" />
 
-    <i-form-group>
-      <i-form-label>Düngen</i-form-label>
-      <i-radio-group v-model="duengen">
-        <i-radio value="plantFertiliser">
-          Topfplanzendünger
-        </i-radio>
-        <i-radio value="cactusFertiliser">
-          Kakteendünger
-        </i-radio>
-        <i-radio value="fertiliser">
-          Kein Dünger
-        </i-radio>
-      </i-radio-group>
-    </i-form-group>
+    <FormKit v-model="duengen" type="radio" label="Düngen?"
+      :options="['Topfplanzendünger', 'Kakteendünger', 'Kein Dünger']" help="Was für Dünger braucht deine Pflanze?" />
 
-    <i-form-group>
-      <i-form-label>Jährlich umtopfen?</i-form-label>
-      <i-radio-group v-model="umtopfen">
-        <i-radio value="yes">
-          Ja
-        </i-radio>
-        <i-radio value="no">
-          Nein
-        </i-radio>
-      </i-radio-group>
-    </i-form-group>
 
-    <i-form-group>
-      <i-form-label>Wurde die Pflanze kürzlich gegossen?</i-form-label>
-      <i-checkbox v-model="recentlyWatered">
-        Ja
-      </i-checkbox>
-    </i-form-group>
+    <FormKit v-model="umtopfen" type="radio" label="Jährlich umtopfen?" :options="['Ja', 'Nein']"
+      help="Wann muss deine Pflanze umgetopft werden" />
 
-    <i-form-group>
-      <i-button type="submit" :loading="loading">
-        Submit
-      </i-button>
-    </i-form-group>
-  </i-form>
+    <FormKit v-model="recentlyWatered" type="radio" label="Has the plant been watered recently?" :options="['Ja', 'Nein']"
+      help="Kürzlich gegossen?" />
+
+  </FormKit>
 </template>
-
-<style scoped></style>
